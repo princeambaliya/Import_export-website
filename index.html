@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple Website</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="header-content">
+        <div class="contact-info">
+          <p>princeambaliya42@gmail.com</p>
+          <p>+91 9512559614</p>
+        </div>
+        <div class="logo">
+          <img src="instagram.png" alt="Instagram Logo" />
+          <img src="facebook.png" alt="Facebook Logo" />
+          <img src="twitter.png" alt="Twitter Logo" />
+          <img src="linkedin.png" alt="LinkedIn Logo" />
+        </div>
+        <div class="language-selector">
+          <select>
+            <option value="en">English</option>
+            <option value="fr">French</option>
+            <option value="es">Spanish</option>
+          </select>
+        </div>
+      </div>
+    </header>
+
+    <div class="header-content">
+      <div class="logo_name">
+        <img src="logo_name.png" alt="Website Logo" />
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#about-section">About</a></li>
+          <li><a href="#Services-section">Services</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <main>
+      <div class="photo-container">
+        <img
+          src="kohli.jpg"
+          alt="Full Screen Photo"
+          class="full-screen-photo"
+        />
+        <div class="text-overlay">
+          <h1>Welcome to Our Website</h1>
+          <p>Explore our services and offerings</p>
+        </div>
+      </div>
+
+      <div id="about-section" class="abouts_us-container">
+        <img
+          src="abouts_us.jpg"
+          alt="Full Screen Photo"
+          class="abouts_us-photo"
+        />
+        <div class="abouts_us_text-overlay">
+          <h1>Antarctico Export</h1>
+          <p>
+            We specializes in sourcing premium agricultural products from the
+            diverse landscapes of India. Our commitment to sustainability and
+            fair trade practices ensures the delivery of top-quality crops,
+            spices, and organic produce. Through strong partnerships with local
+            farmers, we export the authentic flavors and richness of India's
+            agriculture, maintaining stringent quality control to offer
+            exceptional products to global markets. Join us in celebrating and
+            sharing the bounty of India's fertile lands while supporting
+            sustainable farming practices and local communities.
+          </p>
+        </div>
+      </div>
+
+
+
+
+      <div id="Services-section" class="services-container">
+        <div class="services-text-overlay">
+          <h1>Why Choose Us?</h1>
+        </div>
+        <!-- Logos -->
+        <div class="services-logos">
+            <div class="services-logo">
+              <img src="excellency.png" alt="Logo 1">
+              <p>Excellency</p>
+            </div>
+            <div class="services-logo">
+              <img src="commitment.png" alt="Logo 2">
+              <p>Commitment</p>
+            </div>
+            <div class="services-logo">
+              <img src="customer_support.png" alt="Logo 3">
+              <p>Customer Support</p>
+            </div>
+            <div class="services-logo">
+              <img src="honesty.png" alt="Logo 4">
+              <p>Honesty</p>
+            </div>
+            <div class="services-logo">
+              <img src="quality.png" alt="Logo 5">
+              <p>Quality</p>
+            </div>
+            <div class="services-logo">
+              <img src="social_contribution.png" alt="Logo 6">
+              <p>Social Contribution</p>
+            </div>
+          </div>
+          
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </main>
+
+    <footer>
+      <p>&copy; 2024 Website. All rights reserved.</p>
+    </footer>
+
+     
+
+
+
+    <script>  
+        document.addEventListener('DOMContentLoaded', function() {
+          const aboutLink = document.querySelector('a[href="#about-section"]');
+          const servicesLink = document.querySelector('a[href="#Services-section"]');
+      
+          aboutLink.addEventListener('click', function(event) {
+            event.preventDefault();
+            const aboutSection = document.getElementById('about-section');
+            aboutSection.scrollIntoView({ behavior: 'smooth' });
+          });
+      
+          servicesLink.addEventListener('click', function(event) {
+            event.preventDefault();
+            const servicesSection = document.getElementById('Services-section');
+            servicesSection.scrollIntoView({ behavior: 'smooth' });
+          });
+        });
+      </script>
+      
+
+
+
+     
+
+      
+
+  </body>
+</html>
