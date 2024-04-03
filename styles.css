@@ -2,8 +2,15 @@
 body, html {
     font-family: Arial, sans-serif;
     margin: 0;
+    
     padding: 0;
     overflow-x: hidden; /* Hide horizontal scrollbar */
+}
+
+
+html{
+    scroll-behavior: smooth;
+
 }
 
 /* Header styles */
@@ -178,7 +185,7 @@ footer {
     align-items: center;
     justify-content: center;
     text-align: center;
-    background-color: #e3d8d8;
+    background-color: #e9ecef;
     width: 100vw;
 
 }
@@ -198,12 +205,42 @@ footer {
 
 /* Services logo container */
 .services-logo {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    margin: 20px; /* Adjust margin between logos */
+    position: relative;
+    cursor: pointer;
+    margin: 20px;
 }
+
+/* Add styles for the footer text */
+ 
+  
+ 
+  /* Add styles for the text */
+  .logo-text {
+    font-size: 1.2em;
+    margin-top: 10px; /* Adjust margin as needed */
+  }
+  
+  /* Add hover effect for services-logo */
+  .services-logo:hover .logo-text-container {
+    display: block; /* show container on hover */
+  }
+  
+  
+  /* Add styles for the text */
+  .logo-text {
+    font-size: 1.2em;
+    margin-top: 10px; /* Adjust margin as needed */
+  }
+
+  /* Add hover effect for services-logo */
+  .services-logo:hover .logo-text-container {
+    display: block; /* show container on hover */
+  }
+
+  .logo-text-container {
+    display: none; /* initially hidden */
+  }
+
 
 /* Services logo paragraph styles */
 .services-logo p {
@@ -224,3 +261,51 @@ footer {
 .services-logo img:hover {
     transform: scale(1.1); /* Increase size on hover */
 }
+
+.logo-description{
+    margin-bottom: 50px;
+}
+ .logos-description{
+    font-size: 20px;
+    width: 65vw;
+ }
+
+ /* portfolio  */
+
+ .portfolio_h4{
+    text-align: center;
+ }
+
+ ul.button-list {
+    list-style-type: none; /* Remove default list styling */
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
+    text-align: center; /* Center the buttons horizontally */
+  }
+
+  /* Style for list items */
+  ul.button-list li {
+    display: inline-block; /* Display list items inline */
+    margin-right: 10px; /* Add spacing between buttons */
+  }
+
+  /* Style for buttons */
+  ul.button-list li button {
+    padding: 10px 30px; 
+    font-weight: 600;/* Add padding to the buttons */
+    background-color: #c8c6ba; /* Set background color */
+    color: #060650; /* Set text color */
+    border: 0px; /* Remove border */
+    border-radius: 0px; /* Add border radius */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    transition: background-color 0.3s; /* Add transition effect */
+  }
+
+  /* Change background color on hover */
+  ul.button-list li button:hover {
+    background-color: #0056b3;
+  }
+
+
+
+ 

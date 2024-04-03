@@ -5,11 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Simple Website</title>
     <link rel="stylesheet" href="styles.css" />
+
     <style>
       html {
         scroll-behavior: smooth;
       }
+      #logo-description {
+        color: rgba(33, 37, 41, 0.5);
+      }
+
+
     </style>
+    
   </head>
   <body>
     <header>
@@ -43,6 +50,7 @@
           <li><a href="#">Home</a></li>
           <li><a href="#about-section">About</a></li>
           <li><a href="#Services-section">Services</a></li>
+          <li><a href="#Portfolio-section">Portfolio</a></li>
           <li><a href="#">Contact</a></li>
         </ul>
       </nav>
@@ -83,96 +91,117 @@
         </div>
       </div>
 
-
-
-
       <div id="Services-section" class="services-container">
         <div class="services-text-overlay">
           <h1>Why Choose Us?</h1>
         </div>
         <!-- Logos -->
         <div class="services-logos">
-            <div class="services-logo">
-              <img src="excellency.png" alt="Logo 1">
-              <p>Excellency</p>
-            </div>
-            <div class="services-logo">
-              <img src="commitment.png" alt="Logo 2">
-              <p>Commitment</p>
-            </div>
-            <div class="services-logo">
-              <img src="customer_support.png" alt="Logo 3">
-              <p>Customer Support</p>
-            </div>
-            <div class="services-logo">
-              <img src="honesty.png" alt="Logo 4">
-              <p>Honesty</p>
-            </div>
-            <div class="services-logo">
-              <img src="quality.png" alt="Logo 5">
-              <p>Quality</p>
-            </div>
-            <div class="services-logo">
-              <img src="social_contribution.png" alt="Logo 6">
-              <p>Social Contribution</p>
-            </div>
-          </div>
           
+
+            <div class="services-logo" id="excellency-logo" onmouseover="showDescription('Team of professional which posses customer centric approach.')" onmouseout="hideDescription()">
+              <img src="excellency.png" alt="Logo 1" />
+              <p>Excellency</p>
+               
+            </div>
+
+          <div class="services-logo" onmouseover="showDescription('At Antarctico International, we are committed to all our stakeholders adhering ethical practices in business operations to honour our deliverables to every person, entity or organization, associated with us.')" onmouseout="hideDescription()">
+            <img src="commitment.png" alt="Logo 2" />
+            <p>Commitment</p>
+             
+          </div>
+
+          <div class="services-logo" onmouseover="showDescription('We are sincerely dedicated to our customers’ concerns; hence we promise solving your concerns and getting back to you round the clock. We are here to serve you.')" onmouseout="hideDescription()">
+            <img src="customer_support.png" alt="Logo 3" />
+            <p>Customer Support</p>
+             
+          </div>
+
+          <div class="services-logo" onmouseover="showDescription('For us, Integrity implies honesty and transparency in our business processes and the highest level of ethical behaviour and professional act in customer services.')" onmouseout="hideDescription()">
+            <img src="honesty.png" alt="Logo 4" />
+            <p>Honesty</p>
+             
+          </div>
+
+          <div class="services-logo" onmouseover="showDescription('We are associated with brands trusted by your customers. We are dedicated to provide you best quality product on reasonable rate.')" onmouseout="hideDescription()">
+            <img src="quality.png" alt="Logo 5" />
+            <p>Quality</p>
+             
+          </div>
+
+          <div class="services-logos">
+            <div class="services-logo" onmouseover="showDescription('we believe that our responsibility as a member of society to create value in society through employment generation, uplifting economy by export. We also support women empowerment by exporting the products of Small & Cottage Industries which is led by women.')" onmouseout="hideDescription()">
+              <img src="social_contribution.png" alt="Logo 6" />
+              <p>Social Contribution</p>
+               
+            </div>
+         
+        </div>
+
+        <p class="logos-description" id="logo-description"></p>
+          </div>
+        </div>
+        <div id="Portfolio-section">
+        <h1 class="portfolio_h4">Portfolio</h1>
+        <h2 class="portfolio_h4">Check our Portfolio</h2>
+        <div>
+          <ul class="button-list">
+            <li><button>ALL</button></li>
+            <li><button>SPICES</button></li>
+            <li><button>BEANS</button></li>
+            <li><button>GRAINS</button></li>
+            <li><button>VEGETABLES</button></li>
+            <li><button>FRUITS</button></li>
+          </ul>
+        </div>
       </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+      </div>
     </main>
 
-    <footer>
+    <!-- <footer>
       <p>&copy; 2024 Import Export Website. All rights reserved.</p>
-    </footer>
+    </footer> -->
 
-     
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const aboutLink = document.querySelector('a[href="#about-section"]');
+        const servicesLink = document.querySelector(
+          'a[href="#Services-section"]'
+        );
+        const portfolioLink= document.querySelector('a[href="#Portfolio-section"]');
 
- 
-
-    <script>  
-        document.addEventListener('DOMContentLoaded', function() {
-          const aboutLink = document.querySelector('a[href="#about-section"]');
-          const servicesLink = document.querySelector('a[href="#Services-section"]');
-      
-          aboutLink.addEventListener('click', function(event) {
-            event.preventDefault();
-            const aboutSection = document.getElementById('about-section');
-            aboutSection.scrollIntoView({ behavior: 'smooth' });
-          });
-      
-          servicesLink.addEventListener('click', function(event) {
-            event.preventDefault();
-            const servicesSection = document.getElementById('Services-section');
-            servicesSection.scrollIntoView({ behavior: 'smooth' });
-          });
+        aboutLink.addEventListener("click", function (event) {
+          event.preventDefault();
+          const aboutSection = document.getElementById("about-section");
+          aboutSection.scrollIntoView({ behavior: "smooth" });
         });
-      </script>
-      
 
+        servicesLink.addEventListener("click", function (event) {
+          event.preventDefault();
+          const servicesSection = document.getElementById("Services-section");
+          servicesSection.scrollIntoView({ behavior: "smooth" });
+        });
 
+        portfolioLink.addEventListener("click", function (event) {
+          event.preventDefault();
+          const portfolioSection = document.getElementById("Portfolio-section");
+          portfolioSection.scrollIntoView({ behavior: "smooth" });
+        });
+      });
+    </script>
 
+    <script>
+      function showDescription(text) {
+        document.getElementById('logo-description').innerText = text;
+      }
+  
+      function hideDescription() {
+        document.getElementById('logo-description').innerText = 'For us, Integrity implies honesty and transparency in our business processes and the highest level of ethical behaviour and professional act in customer services.';
+      }
+  
+      // Set default text initially
+      hideDescription();
+    </script>
      
-
-      
-
   </body>
 </html>
