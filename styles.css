@@ -308,4 +308,24 @@ footer {
 
 
 
+  /* portfolio img*/
+
+
+  .portfolio-photo-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columns */
+    grid-gap: 10px; /* Spacing between grid items */
+    margin: 0 auto; /* Center the grid */
+    max-width: 800px; /* Set maximum width for the grid */
+  }
+
+  /* Style for grid items (photos) */
+  .portfolio-photo-grid {
+    width: 100%; /* Ensure photos fill the grid items */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 5px; /* Add border radius */
+  }
+
+
+
  
